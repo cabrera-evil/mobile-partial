@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.city.home.HomeFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.evildev.citytracker.ui.city.viewmodel.CityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_theme_light_background">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_light_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/home_title"
+                app:titleTextColor="@color/md_theme_light_onPrimary" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/add_city_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:layout_marginTop="371dp"
+            android:text="@string/add_city"
+            app:icon="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.995" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="667dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            tools:itemCount="2"
+            tools:listitem="@layout/city_item"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
