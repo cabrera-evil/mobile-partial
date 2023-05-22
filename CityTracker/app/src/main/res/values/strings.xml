@@ -8,4 +8,7 @@
     <string name="name_hint">Name</string>
     <string name="population_hint">Population</string>
     <string name="submit_button">Submit Button</string>
+    <string name="name_example">Name Example</string>
+    <string name="population_example">Population Example</string>
+    <string name="detail_title">Detail City</string>
 </resources>
