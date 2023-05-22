@@ -1,6 +1,7 @@
 package com.evildev.citytracker.ui.city.home
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,11 +40,11 @@ class BillboardFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
-    private fun setRecyclerView(view:View){
+    private fun setRecyclerView(view: View) {
         binding.recyclerView.layoutManager = LinearLayoutManager(view.context)
 
-        adapter = CityRecyclerViewAdapter(){
-                selectedCity -> showSelectedItem(selectedCity)
+        adapter = CityRecyclerViewAdapter() { selectedCity ->
+            showSelectedItem(selectedCity)
         }
 
         binding.recyclerView.adapter = adapter
