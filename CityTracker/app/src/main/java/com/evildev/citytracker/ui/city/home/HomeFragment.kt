@@ -15,7 +15,7 @@ import com.evildev.citytracker.databinding.FragmentHomeBinding
 import com.evildev.citytracker.ui.city.home.recyclerview.CityRecyclerViewAdapter
 import com.evildev.citytracker.ui.city.viewmodel.CityViewModel
 
-class BillboardFragment : Fragment() {
+class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapter: CityRecyclerViewAdapter
     private val cityViewModel: CityViewModel by activityViewModels {
